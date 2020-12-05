@@ -1,0 +1,63 @@
+﻿<Page x:Class="Alquiler.paginas.PagCrearInmueble"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alquiler.paginas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PagCrearInmueble">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" Margin="0 10">
+                    <TextBlock>Tipo de Inmueble:</TextBlock>
+                    <ComboBox x:Name="cbTipoinmueble" SelectionChanged="cbTipoinmueble_SelectionChanged">
+                        <ComboBoxItem Tag="1" Content="Local Comercial"></ComboBoxItem>
+                        <ComboBoxItem Tag="2" Content="Vivienda"></ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock>Referencia:</TextBlock>
+                    <TextBox x:Name="txtReferencia"></TextBox>
+                    <TextBlock>Poblacion:</TextBlock>
+                    <ComboBox x:Name="cbPoblacion"></ComboBox>
+                    <TextBlock>Precio Base:</TextBlock>
+                    <TextBox x:Name="txtPrecioBase"></TextBox>
+                </StackPanel>
+
+                <StackPanel Name="spOptionsLocal" Orientation="Vertical" Visibility="Visible">
+                    <TextBlock>Tamaño:</TextBlock>
+                    <TextBox x:Name="txtTamano"></TextBox>
+                    <TextBlock>Reformado:</TextBlock>
+                    <ComboBox x:Name="cbReformado">
+                        <ComboBoxItem Tag="false" Content="no" IsSelected="True"></ComboBoxItem>
+                        <ComboBoxItem Tag="true" Content="si" ></ComboBoxItem>
+                    </ComboBox>
+                   
+                </StackPanel>
+
+                <StackPanel Name="spOptionsVivienda" Orientation="Vertical" Visibility="Collapsed">
+                    <TextBlock>Numero de habitaciones:</TextBlock>
+                    <TextBox x:Name="txtNumHab"></TextBox>
+                </StackPanel>
+                
+                <Button Content="CrearInmueble" Padding="10" Margin="5" Click="click_crearInmueble" Background="LightBlue"></Button>
+                <Label x:Name="lblError"></Label>
+            </StackPanel>
+            
+        </Grid>
+        
+        
+
+        
+    </Grid>
+</Page>

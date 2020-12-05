@@ -1,0 +1,35 @@
+﻿<Page x:Class="Alquiler.paginas.PagAlquiler"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alquiler.paginas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PagAlquiler">
+
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <StackPanel>
+                <TextBlock Text="Seleccionar algo para alquilar:"></TextBlock>
+                <TextBox x:Name="txtSelectAlquiler"></TextBox>
+                <Button Content="Seleccionar al azar" Click="Click_seleccinar_alquiler" Margin="5" Padding="10" Background="LightBlue"></Button>
+                <Label x:Name="txtResultalquiler"></Label>
+                <TextBlock Text="Seleccionar algo para devolver:"></TextBlock>
+                <TextBox x:Name="txtSelectDevolver"></TextBox>
+                <Button Content="Seleccionar al azar" Click="Click_seleccinar_devolver" Margin="5" Padding="10" Background="LightBlue"></Button>
+                <Label x:Name="txtResultdevolver"></Label>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Page>

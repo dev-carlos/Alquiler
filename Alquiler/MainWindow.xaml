@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <WrapPanel Orientation="Horizontal">
+                <Button  Padding="10"  Content="Crear vehiculo" Click="click_crearVehiculo"></Button>
+                <Button  Padding="10"  Content="Crear Inmueble" Click="click_crearInmueble"></Button>
+                <Button  Padding="10" Content="Oferta" Click="click_oferta"></Button>
+                <Button  Padding="10" Content="Alquiler" Click="click_alquiler"></Button>
+                <Button  Padding="10" Content="Mostar" Click="click_mostrar"></Button>
+                <Button  Padding="10" Content="Salir" Click="click_salir"></Button>
+            </WrapPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame x:Name="frame_principal" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
 
     </Grid>
 </Window>
